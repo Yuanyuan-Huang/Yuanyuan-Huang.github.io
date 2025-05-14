@@ -16,6 +16,7 @@ GEM
     ffi (1.17.2-x86_64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
+
     google-protobuf (4.30.2-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
@@ -25,6 +26,7 @@ GEM
     google-protobuf (4.30.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
+      
     http_parser.rb (0.8.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
@@ -70,6 +72,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
+Update_publication
     rexml (3.4.1)
     rouge (4.5.2)
     safe_yaml (1.0.5)
