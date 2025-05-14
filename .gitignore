@@ -3,8 +3,23 @@ nature/
 _site/
 .sass-cache/
 .jekyll-metadata
-
+.jekyll-cache/
 ### macOS ###
 *.DS_Store
 .AppleDouble
 .LSOverride
+
+# Ignore dependencies
+node_modules/
+vendor/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/

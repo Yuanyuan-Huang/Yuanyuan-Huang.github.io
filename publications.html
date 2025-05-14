@@ -17,7 +17,7 @@ title: Publications
   <a href="https://orcid.org/0000-0002-6990-8864">ORCID</a>
 </h2>
 
-<div class="galleryIndexWrapper">
+<!-- <div class="galleryIndexWrapper">
   <h3>
   <h3>
     de Souza, Y.P.A., Schloter, M., Weisser, W., <b><i>Huang, Y.</i></b>, Schulz, S., 2024. The seeds of Plantago lanceolata comprise a stable core microbiome along a plant richness gradient. Environmental Microbiome 19, 11. <a href="https://doi.org/10.1186/s40793-024-00552-x">https://doi.org/10.1186/s40793-024-00552-x</a>
@@ -71,4 +71,26 @@ title: Publications
     <b><i>Huang, Y.</i></b>, Olbrecht L., Yang X., He J.-S. (2013) Effects of nutrient additions on the colonization of arbuscular mycorrhizal fungi in the alpine meadow on the Tibetan Plateau. Acta Scientiarum Naturalium Universitatis Pekinensis, 50, 911-918 (in Chinese with English abstract). <a href="http://xbna.pku.edu.cn/CN/Y2014/V50/I5/911">http://xbna.pku.edu.cn/CN/Y2014/V50/I5/911</a>
     <hr/>
   </h3>
+</div> -->
+
+<div class="galleryIndexWrapper" style="max-width: 900px; margin: 0 auto; padding: 0 1rem;">
+  {% assign sorted_pubs = site.data.Huang | sort: "year" | reverse %}
+  {% for pub in sorted_pubs %}
+    <div class="pub-entry" style="margin-bottom: 1.5rem;">
+      <p style="margin: 0;">
+        {{ pub.authors | markdownify | strip | remove: '<p>' | remove: '</p>' }} ({{ pub.year }}).
+        <strong>{{ pub.title }}</strong>.
+        <em>{{ pub.journal }}</em>
+        {% if pub.volume %} <strong>{{ pub.volume }}</strong>{% endif %}
+        {% if pub.pages %}, {{ pub.pages }}{% endif %}.
+        {% if pub.doi %}
+          <a href="{{ pub.doi }}">{{ pub.doi }}</a>
+        {% endif %}
+      </p>
+      <hr style="margin: 1rem 0;" />
+    </div>
+  {% endfor %}
 </div>
+
+
+
